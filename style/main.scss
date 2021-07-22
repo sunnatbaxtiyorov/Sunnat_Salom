@@ -1,0 +1,265 @@
+@import 'mixin';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    li{
+        list-style: none;
+    }
+}
+
+a{
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    color: #828282;
+}
+
+img{
+    object-fit: cover;
+    overflow: hidden;
+}
+
+input{
+    &:focus{
+        outline: none;
+    }
+}
+
+.navbar{
+    padding: 25px;
+}
+
+.nav-list{
+    margin: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    &__link{
+        @include flexbox(flex,center,20px);
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 22px;
+        color: #14171A;
+
+        &:hover{
+            color: #1DA1F2;
+            stroke: #1DA1F2;
+            transform: scale(1.02);
+        }
+    }
+}
+
+.nickname{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+}
+.btn{
+   @include color(#1DA1F2,#fff);
+   padding: 15px 40px;
+   box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.08);
+   border-radius: 24.5px;
+   border: none;
+   cursor: pointer;
+   transition: all 0.35s;
+
+   &_outline{
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 18px;
+        color: #1DA1F2;
+        border: 1px solid #1DA1F2;
+        padding: 6px 16px;
+        border-radius: 59px;
+        background-color: #fff;
+        cursor: pointer;
+   }
+
+   &_md{
+       padding: 15px 85px;
+   }
+
+   &:hover{
+       opacity: 0.6;
+   }
+}
+
+.aside{
+    padding: 25px;
+}
+
+.search{
+    position: relative;
+}
+.input{
+    width: 100%;
+    padding: 12px 50px;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    line-height: 17px;
+    @include color(#E6ECF0,#6E7F8D);
+}
+
+.input-shape{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(18px, 13px);
+}
+
+.trend-table{
+    background: #F6F8FA;
+    border-radius: 12px;
+    margin-top: 20px;
+
+    &__header{
+        @include flexbox(flex,center,0px);
+        justify-content: space-between;
+        padding: 20px;
+    }
+    &__title{
+        font-weight: 900;
+        font-size: 19px;
+        line-height: 22px;
+        color: #000000;
+    }
+
+    &__link{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #1DA1F2;
+        @include flexbox(flex,center,0px);
+        justify-content: center;
+        padding: 12px;
+    }
+}
+
+.trend-table-group{
+    @include flexbox(flex,flex-start,10px);
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);;
+    padding: 16px;
+
+    &__profile{
+        @include flexbox(flex,flex-start,8px);
+    }
+
+    &__name{
+        @include flexbox(flex,flex-start,5px);
+    }
+
+    &__number{
+        font-size: 12px;
+        line-height: 14px;
+        color: #828282;
+    }
+
+    &__tweet{
+        font-size: 14px;
+        line-height: 16px;
+        color: #828282;
+    }
+
+    &__hashtag{
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 18px;
+        color: #333333;
+        margin: 4px 0px;
+    }
+}
+
+.main{
+    border: 1px solid #ccc;
+    
+}
+
+.main-top{
+    @include flexbox(flex,center,10px);
+    justify-content: space-between;
+    padding: 55px 33px 20px;
+    border-bottom: 1px solid #ccc;
+
+    &__title{
+        font-weight: 900;
+        font-size: 19px;
+        line-height: 22px;
+        color: #000000;
+    }
+}
+
+.main-publish{
+    @include flexbox(flex,flex-start,20px);
+    padding: 15px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.form{
+    width: 100%;
+    &__input{
+        font-size: 19px;
+        line-height: 22px;   
+        color: #828282;
+        padding: 10px 0px;
+        width: 100%;
+        border: none;
+        
+    }
+
+    &__actions{
+        @include flexbox(flex,center,0px);
+        justify-content: space-between;
+    }
+
+    &__perform{
+        @include flexbox(flex,center,25px);
+    }
+
+    &__send{
+        @include flexbox(flex,center,10px);
+    }
+}
+
+.content{
+    @include flexbox(flex,flex-start,16px);
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-name{
+    @include flexbox(flex,center,10px);
+    justify-content: space-between;
+
+    &__group{
+        @include flexbox(flex,center,5px);        
+    }
+}
+
+.content-text{
+    font-size: 15px;
+    line-height: 22px; 
+    color: #333333;
+    margin: 5px 0px;
+}
+
+.icons{
+    @include flexbox(flex,center,0px);
+    justify-content: space-around;
+    padding: 10px 0px;
+}

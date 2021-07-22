@@ -1,2 +1,2 @@
 # Sunnat_Salom
-Zor Project
+Zor Proje
